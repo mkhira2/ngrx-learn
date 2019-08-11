@@ -15,4 +15,4 @@ export class RemoveTutorial implements Action {
     constructor(public payload: number) {}
 }
 
-export type Actions = AddTutorial | RemoveTutorial
+export type Actions = AddTutorial | RemoveTutorial;
