@@ -1,24 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { AppState } from './../app.state';
-import { Tutorial } from './../models/tutorial.model';
 import * as TutorialActions from './../actions/tutorial.actions';
-import { Observable } from 'rxjs/internal/Observable';
 
 @Component({
   selector: 'app-create',
-  templateUrl: './create.component.html',
-  styleUrls: ['./create.component.css']
+  templateUrl: './create.component.html'
 })
-export class CreateComponent implements OnInit {
+export class CreateComponent {
 
   constructor(private store: Store<AppState>) { }
 
   addTutorial(name, url) {
     this.store.dispatch(new TutorialActions.AddTutorial({ name: name, url: url }))
   }
-
-  ngOnInit() {
-  }
-
 }
